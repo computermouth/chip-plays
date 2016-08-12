@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+
+<body>
+<canvas id="myCanvas" width="480" height="272" style="border:1px solid #FF69B4;">
+can't display sry lol
+</canvas>
+
+<canvas id="coinAnimation"></canvas>
+
+<script>
+
+var canvas;
+var ctx;
+var x=0;
+
+function init(){
+	window.requestAnimationFrame(draw);
+	var canvas = document.getElementById("myCanvas");
+	ctx = canvas.getContext("2d");
+	draw();
+}
+
+function draw(){
+
+
+	ctx.fillStyle = "#000000";
+	ctx.fillRect(0,0,480,272);
+	ctx.save();
+
+	ctx.fillStyle = "#FF69B4";
+	ctx.fillRect((220+x),116,40,40);
+	ctx.save();		
+
+	ctx.restore();
+	ctx.restore();
+
+	window.requestAnimationFrame(draw);
+	x=x+1;
+}
+
+init();
+</script>
+
+
+</body>
+
+
+</html>
