@@ -1,0 +1,9 @@
+[Unit]
+ConditionFileIsExecutable=/bin/watch_buttons
+
+[Service]
+Type=simple
+ExecStart=/bin/watch_buttons
+
+[Install]
+WantedBy=multi-user.target
