@@ -27,20 +27,39 @@ function init(){
 
 function draw(){
 
+	var request = new XMLHttpRequest();
+	request.open('GET', '/chip-plays/xpos/?p', true);
+
+	request.onload = function() {
+  		if (request.status >= 200 && request.status < 400) {
+    			// Success!
+    			x = request.responseText;
+  		} else {
+    			// We reached our target server, but it returned an error
+
+  		}
+	};
+
+	request.onerror = function() {
+  		// There was a connection error of some sort
+	};
+
+	request.send();
+
+	//x=
 
 	ctx.fillStyle = "#000000";
 	ctx.fillRect(0,0,480,272);
 	ctx.save();
 
 	ctx.fillStyle = "#FF69B4";
-	ctx.fillRect((220+x),116,40,40);
+	ctx.fillRect(x,116,40,40);
 	ctx.save();		
 
 	ctx.restore();
 	ctx.restore();
 
 	window.requestAnimationFrame(draw);
-	x=x+1;
 }
 
 init();
