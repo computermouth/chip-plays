@@ -18,7 +18,7 @@ int main(){
 		
 		if(qs[0] == 'p'){
 			printf("%d", xpos);
-		}else if(qs[0] == 'm'){
+		}else if(qs[0] == 's'){
 			xpos--;
 		}else if(qs[0] == 'a'){
 			xpos++;

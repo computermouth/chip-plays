@@ -14,7 +14,7 @@ server {
         }
 
 
-	location /butts/ {
+	location /chip-plays/xpos {
 		include /etc/nginx/fastcgi_params;
 		fastcgi_pass 127.0.0.1:1337;
 	}
