@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
   CURL *hnd;
 
   hnd = curl_easy_init();
-  curl_easy_setopt(hnd, CURLOPT_URL, "https://computermouth.com/chip-plays/xpos?p");
+  curl_easy_setopt(hnd, CURLOPT_URL, "https://computermouth.com/chip-plays/xpos/?p");
   curl_easy_setopt(hnd, CURLOPT_NOPROGRESS, 1L);
   curl_easy_setopt(hnd, CURLOPT_USERAGENT, "curl/7.38.0");
   curl_easy_setopt(hnd, CURLOPT_MAXREDIRS, 50L);
