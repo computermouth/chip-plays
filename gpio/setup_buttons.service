@@ -1,0 +1,9 @@
+[Unit]
+ConditionFileIsExecutable=/bin/setup_buttons
+
+[Service]
+Type=simple
+ExecStart=/bin/setup_buttons
+
+[Install]
+WantedBy=basic.target

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+while true; do
+	B1="$(cat /sys/class/gpio/gpio1016/value)"
+	if [[ "$B1" = "0" ]];then
+		xminus &
+	fi
+	B2="$(cat /sys/class/gpio/gpio1017/value)"
+	if [[ "$B2" = "0" ]];then
+		xplus &
+	fi
+done
